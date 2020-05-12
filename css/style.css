@@ -51,12 +51,17 @@ main {
     margin-bottom: 39px;
 }
 
-.email, .email form {
+.email {
+    margin-bottom: 93px;
+    width: 100%;
+}
+
+.email form {
     height: 56px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 93px;
+
 }
 
 .email form input {
@@ -67,6 +72,28 @@ main {
     border: 1px solid hsl(223, 100%, 88%);
     outline: none;
 }
+
+.email small {
+    display: none;
+}
+
+.email.error small {
+    margin-top: 11px;
+    display: block;
+    padding-left: 37px;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: hsl(354, 100%, 66%);
+}
+
+.email.error form input {
+    border: 1px solid hsl(354, 100%, 66%);
+}
+
+.email.error form input::placeholder {
+    color: hsl(354, 100%, 66%);
+}
+
 
 .email form input::placeholder {
     font-size: 1rem;
@@ -82,6 +109,12 @@ main {
     color: white;
     font-weight: 700;
     font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 10px 0 hsl(223, 100%, 88%);
+}
+
+.email form button:hover {
+    background-color: #7195f5;
 }
 
 .img img {
@@ -96,7 +129,7 @@ footer .icons {
     margin-bottom: 29px;
 }
 
-.icons i {
+.icons a {
     width: 30px;
     height: 30px;
     color: hsl(223, 87%, 63%);
@@ -106,6 +139,13 @@ footer .icons {
     align-items: center;
     border:1px solid hsl(223, 100%, 88%);
     border-radius: 50%;
+    font-size: .9rem;
+}
+
+
+.icons a:hover {
+    background-color: hsl(223, 87%, 63%);
+    color: white;
 }
 
 footer p {
